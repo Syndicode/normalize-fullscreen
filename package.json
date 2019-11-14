@@ -1,7 +1,7 @@
 {
   "name": "@syndicode/screenfull",
   "private": false,
-  "version": "5.0.0",
+  "version": "5.0.1",
   "description": "Simple wrapper for cross-browser usage of the JavaScript Fullscreen API, which lets you bring the page or any element into fullscreen.",
   "license": "MIT",
   "repository": {
