@@ -10,7 +10,7 @@ module.exports = grunt => {
 				'* v<%= pkg.version %> - ' +
 				'<%= grunt.template.today("yyyy-mm-dd") %>\n' +
 				'<%= pkg.homepage ? "* " + pkg.homepage + "\\n" : "" %>' +
-				'* (c) <%= pkg.author.name %>;' +
+				'* (c) <%= pkg.authors[0].name %>;' +
 				' <%= pkg.license %> License\n' +
 				'*/\n'
 		},
