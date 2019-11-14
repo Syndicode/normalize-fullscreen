@@ -18,7 +18,7 @@
 			],
 			// New WebKit
 			[
-				'webkitRequestFullscreen',
+				'webkitEnterFullscreen',
 				'webkitExitFullscreen',
 				'webkitFullscreenElement',
 				'webkitFullscreenEnabled',
