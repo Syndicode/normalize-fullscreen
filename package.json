@@ -1,44 +1,46 @@
 {
-	"name": "screenfull",
-	"version": "5.0.0",
-	"description": "Simple wrapper for cross-browser usage of the JavaScript Fullscreen API, which lets you bring the page or any element into fullscreen.",
-	"license": "MIT",
-	"repository": "sindresorhus/screenfull.js",
-	"author": {
-		"name": "Sindre Sorhus",
-		"email": "sindresorhus@gmail.com",
-		"url": "sindresorhus.com"
-	},
-	"main": "dist/screenfull.js",
-	"engines": {
-		"node": ">=0.10.0"
-	},
-	"scripts": {
-		"pretest": "grunt",
-		"test": "xo && tsd"
-	},
-	"files": [
-		"dist/screenfull.js",
-		"dist/screenfull.d.ts"
-	],
-	"keywords": [
-		"browser",
-		"fullscreen"
-	],
-	"devDependencies": {
-		"grunt": "^1.0.4",
-		"grunt-contrib-concat": "^1.0.1",
-		"grunt-contrib-copy": "^1.0.0",
-		"grunt-contrib-uglify": "^4.0.1",
-		"load-grunt-tasks": "^4.0.0",
-		"tsd": "^0.7.1",
-		"xo": "^0.16.0"
-	},
-	"types": "dist/screenfull.d.ts",
-	"xo": {
-		"envs": [
-			"node",
-			"browser"
-		]
-	}
+  "name": "@syndicode/normalize-fullscreen",
+  "private": false,
+  "version": "1.0.0",
+  "description": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Syndicode/normalize-fullscreen"
+  },
+  "author": {
+    "name": "Anton Rusinov",
+    "email": "anton.rusinov@syndicode.com",
+    "url": "https://syndicode.com"
+  },
+  "main": "dist/normalize-fullscreen.js",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "prebuild": "npm run test:code",
+    "build": "rollup -c rollup.config.js",
+    "test:types": "tsd",
+    "test:code": "jest",
+    "prepublish": "npm run build"
+  },
+  "files": [
+    "dist/normalize-fullscreen.js",
+    "dist/normalize-fullscreen.d.ts"
+  ],
+  "keywords": [
+    "browser",
+    "fullscreen"
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.7.2",
+    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.4.4",
+    "@babel/plugin-proposal-optional-chaining": "^7.6.0",
+    "@babel/preset-env": "^7.7.1",
+    "jest": "^24.9.0",
+    "rollup": "^1.27.2",
+    "rollup-plugin-babel": "^4.3.3",
+    "tsd": "^0.7.1"
+  },
+  "types": "dist/normalize-fullscreen.d.ts"
 }

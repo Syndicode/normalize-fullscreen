@@ -1,3 +1,4 @@
+
 import {expectType} from 'tsd';
 import screenfull = require('..');
 import {RawEventNames} from '..';
