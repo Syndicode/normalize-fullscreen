@@ -79,19 +79,22 @@ const methodNamesMaps = [
 ];
 
 const matchMethodNames = subject => methodNamesMap => {
+  const requestFullscreen = methodNamesMap[0];
+  const exitFullscreen = methodNamesMap[1];
+
   const isDocument =
     subject.documentElement &&
-    methodNamesMap[1] in subject &&
-    methodNamesMap[0] in subject.documentElement;
+    requestFullscreen in subject &&
+    exitFullscreen in subject.documentElement;
 
   const isIphoneVideo =
-    methodNamesMap[0] in subject && methodNamesMap[1] in subject;
+    exitFullscreen in subject && requestFullscreen in subject;
 
   const isAnotherElement =
     window &&
     window.document &&
-    methodNamesMap[0] in subject &&
-    methodNamesMap[1] in window.document;
+    exitFullscreen in subject &&
+    requestFullscreen in window.document;
 
   return isDocument || isIphoneVideo || isAnotherElement;
 };
